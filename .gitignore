@@ -32,4 +32,10 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.tsN03-20240101_GML/
+next-env.d.ts
+
+# GeoJSON data and analysis files
+N03-20240101_GML/
+*.py
+*_from_geojson.ts
+*_improved.ts
