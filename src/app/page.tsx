@@ -1,3 +1,5 @@
+import GameBoard from '@/components/GameBoard'
+
 export default function Home() {
-  return <div>Nihondle</div>
+  return <GameBoard />
 }

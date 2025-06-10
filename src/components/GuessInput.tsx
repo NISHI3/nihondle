@@ -67,7 +67,7 @@ export default function GuessInput({ onGuess, disabled }: GuessInputProps) {
         onKeyDown={handleKeyDown}
         disabled={disabled}
         placeholder="市名を入力..."
-        className="w-full px-4 py-3 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+        className="w-full px-4 py-3 text-lg text-gray-900 bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed placeholder-gray-400"
       />
       {showSuggestions && (
         <div className="absolute top-full mt-1 w-full bg-white border-2 border-gray-300 rounded-lg shadow-lg z-10">
