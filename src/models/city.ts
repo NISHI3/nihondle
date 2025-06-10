@@ -1,0 +1,126 @@
+import { City } from '@/types/city'
+
+const cities: City[] = [
+  { id: 'tokyo', name: '東京都', prefecture: '東京都', latitude: 35.6762, longitude: 139.6503, population: 14047594 },
+  { id: 'osaka', name: '大阪市', prefecture: '大阪府', latitude: 34.6937, longitude: 135.5023, population: 2753862 },
+  { id: 'nagoya', name: '名古屋市', prefecture: '愛知県', latitude: 35.1815, longitude: 136.9066, population: 2332176 },
+  { id: 'sapporo', name: '札幌市', prefecture: '北海道', latitude: 43.0642, longitude: 141.3469, population: 1973395 },
+  { id: 'fukuoka', name: '福岡市', prefecture: '福岡県', latitude: 33.5904, longitude: 130.4017, population: 1612392 },
+  { id: 'kobe', name: '神戸市', prefecture: '兵庫県', latitude: 34.6901, longitude: 135.1955, population: 1522944 },
+  { id: 'kawasaki', name: '川崎市', prefecture: '神奈川県', latitude: 35.5308, longitude: 139.7029, population: 1539522 },
+  { id: 'kyoto', name: '京都市', prefecture: '京都府', latitude: 35.0116, longitude: 135.7681, population: 1463723 },
+  { id: 'saitama', name: 'さいたま市', prefecture: '埼玉県', latitude: 35.8617, longitude: 139.6455, population: 1324025 },
+  { id: 'hiroshima', name: '広島市', prefecture: '広島県', latitude: 34.3853, longitude: 132.4553, population: 1199391 },
+  { id: 'sendai', name: '仙台市', prefecture: '宮城県', latitude: 38.2682, longitude: 140.8694, population: 1096704 },
+  { id: 'chiba', name: '千葉市', prefecture: '千葉県', latitude: 35.6073, longitude: 140.1063, population: 977247 },
+  { id: 'kitakyushu', name: '北九州市', prefecture: '福岡県', latitude: 33.8835, longitude: 130.8752, population: 939029 },
+  { id: 'sakai', name: '堺市', prefecture: '大阪府', latitude: 34.5733, longitude: 135.4829, population: 818468 },
+  { id: 'niigata', name: '新潟市', prefecture: '新潟県', latitude: 37.9162, longitude: 139.0364, population: 789275 },
+  { id: 'hamamatsu', name: '浜松市', prefecture: '静岡県', latitude: 34.7108, longitude: 137.7261, population: 790718 },
+  { id: 'shizuoka', name: '静岡市', prefecture: '静岡県', latitude: 34.9756, longitude: 138.3828, population: 693389 },
+  { id: 'okayama', name: '岡山市', prefecture: '岡山県', latitude: 34.6551, longitude: 133.9195, population: 724691 },
+  { id: 'sagamihara', name: '相模原市', prefecture: '神奈川県', latitude: 35.5719, longitude: 139.3731, population: 722828 },
+  { id: 'kumamoto', name: '熊本市', prefecture: '熊本県', latitude: 32.7898, longitude: 130.7417, population: 738865 },
+  // 東京都の他の市
+  { id: 'hachioji', name: '八王子市', prefecture: '東京都', latitude: 35.6663, longitude: 139.3160, population: 577513 },
+  { id: 'machida', name: '町田市', prefecture: '東京都', latitude: 35.5483, longitude: 139.4386, population: 432348 },
+  { id: 'fuchu', name: '府中市', prefecture: '東京都', latitude: 35.6689, longitude: 139.4777, population: 260274 },
+  { id: 'chofu', name: '調布市', prefecture: '東京都', latitude: 35.6506, longitude: 139.5408, population: 237815 },
+  { id: 'tachikawa', name: '立川市', prefecture: '東京都', latitude: 35.7142, longitude: 139.4074, population: 184183 },
+  { id: 'musashino', name: '武蔵野市', prefecture: '東京都', latitude: 35.7179, longitude: 139.5660, population: 147492 },
+  { id: 'mitaka', name: '三鷹市', prefecture: '東京都', latitude: 35.6833, longitude: 139.5597, population: 190485 },
+  { id: 'ome', name: '青梅市', prefecture: '東京都', latitude: 35.7877, longitude: 139.2759, population: 133218 },
+  { id: 'akishima', name: '昭島市', prefecture: '東京都', latitude: 35.7058, longitude: 139.3538, population: 113364 },
+  { id: 'kokubunji', name: '国分寺市', prefecture: '東京都', latitude: 35.7020, longitude: 139.4625, population: 126161 },
+  // 他の地方都市
+  { id: 'kanazawa', name: '金沢市', prefecture: '石川県', latitude: 36.5944, longitude: 136.6256, population: 465699 },
+  { id: 'takamatsu', name: '高松市', prefecture: '香川県', latitude: 34.3428, longitude: 134.0435, population: 425885 },
+  { id: 'matsuyama', name: '松山市', prefecture: '愛媛県', latitude: 33.8392, longitude: 132.7658, population: 511192 },
+  { id: 'nagasaki', name: '長崎市', prefecture: '長崎県', latitude: 32.7448, longitude: 129.8737, population: 407624 },
+  { id: 'kagoshima', name: '鹿児島市', prefecture: '鹿児島県', latitude: 31.5966, longitude: 130.5571, population: 599813 },
+  { id: 'naha', name: '那覇市', prefecture: '沖縄県', latitude: 26.2124, longitude: 127.6792, population: 321958 },
+  { id: 'toyama', name: '富山市', prefecture: '富山県', latitude: 36.6953, longitude: 137.2113, population: 418686 },
+  { id: 'gifu', name: '岐阜市', prefecture: '岐阜県', latitude: 35.4232, longitude: 136.7606, population: 402557 },
+  { id: 'nagano', name: '長野市', prefecture: '長野県', latitude: 36.6485, longitude: 138.1809, population: 375234 },
+  { id: 'oita', name: '大分市', prefecture: '大分県', latitude: 33.2396, longitude: 131.6094, population: 478146 },
+  { id: 'miyazaki', name: '宮崎市', prefecture: '宮崎県', latitude: 31.9076, longitude: 131.4202, population: 401138 },
+  { id: 'fukui', name: '福井市', prefecture: '福井県', latitude: 36.0642, longitude: 136.2195, population: 263529 },
+  { id: 'yamagata', name: '山形市', prefecture: '山形県', latitude: 38.2404, longitude: 140.3636, population: 248742 },
+  { id: 'morioka', name: '盛岡市', prefecture: '岩手県', latitude: 39.7036, longitude: 141.1527, population: 290700 },
+  { id: 'akita', name: '秋田市', prefecture: '秋田県', latitude: 39.7186, longitude: 140.1024, population: 305625 },
+  { id: 'aomori', name: '青森市', prefecture: '青森県', latitude: 40.8246, longitude: 140.7406, population: 275192 },
+  { id: 'tsu', name: '津市', prefecture: '三重県', latitude: 34.7185, longitude: 136.5056, population: 274537 },
+  { id: 'otsu', name: '大津市', prefecture: '滋賀県', latitude: 35.0175, longitude: 135.8544, population: 343991 },
+  { id: 'wakayama', name: '和歌山市', prefecture: '和歌山県', latitude: 34.2309, longitude: 135.1709, population: 356719 },
+  { id: 'kofu', name: '甲府市', prefecture: '山梨県', latitude: 35.6636, longitude: 138.5682, population: 187795 },
+  { id: 'matsue', name: '松江市', prefecture: '島根県', latitude: 35.4723, longitude: 133.0505, population: 203616 },
+  { id: 'tottori', name: '鳥取市', prefecture: '鳥取県', latitude: 35.5011, longitude: 134.2351, population: 188465 },
+  { id: 'kochi', name: '高知市', prefecture: '高知県', latitude: 33.5597, longitude: 133.5311, population: 325545 },
+  { id: 'saga', name: '佐賀市', prefecture: '佐賀県', latitude: 33.2634, longitude: 130.3009, population: 233923 },
+  { id: 'fukushima', name: '福島市', prefecture: '福島県', latitude: 37.7609, longitude: 140.4748, population: 284948 },
+  { id: 'mito', name: '水戸市', prefecture: '茨城県', latitude: 36.3415, longitude: 140.4468, population: 270783 },
+  { id: 'utsunomiya', name: '宇都宮市', prefecture: '栃木県', latitude: 36.5551, longitude: 139.8828, population: 518594 },
+  { id: 'maebashi', name: '前橋市', prefecture: '群馬県', latitude: 36.3895, longitude: 139.0634, population: 335352 },
+  { id: 'nara', name: '奈良市', prefecture: '奈良県', latitude: 34.6851, longitude: 135.8048, population: 355463 },
+  { id: 'kawagoe', name: '川越市', prefecture: '埼玉県', latitude: 35.9251, longitude: 139.4859, population: 353301 },
+  { id: 'tokorozawa', name: '所沢市', prefecture: '埼玉県', latitude: 35.7990, longitude: 139.4689, population: 341924 },
+  { id: 'koshigaya', name: '越谷市', prefecture: '埼玉県', latitude: 35.8910, longitude: 139.7909, population: 345574 },
+  { id: 'kawaguchi', name: '川口市', prefecture: '埼玉県', latitude: 35.8075, longitude: 139.7242, population: 594274 },
+  { id: 'kashiwa', name: '柏市', prefecture: '千葉県', latitude: 35.8544, longitude: 139.9689, population: 433436 },
+  { id: 'funabashi', name: '船橋市', prefecture: '千葉県', latitude: 35.6947, longitude: 139.9824, population: 642907 },
+  { id: 'ichikawa', name: '市川市', prefecture: '千葉県', latitude: 35.7196, longitude: 139.9309, population: 496676 },
+  { id: 'matsudo', name: '松戸市', prefecture: '千葉県', latitude: 35.7879, longitude: 139.9029, population: 498575 },
+  { id: 'yokosuka', name: '横須賀市', prefecture: '神奈川県', latitude: 35.2839, longitude: 139.6723, population: 387495 },
+  { id: 'fujisawa', name: '藤沢市', prefecture: '神奈川県', latitude: 35.3392, longitude: 139.4900, population: 436905 },
+  { id: 'hiratsuka', name: '平塚市', prefecture: '神奈川県', latitude: 35.3354, longitude: 139.3497, population: 257877 },
+  { id: 'odawara', name: '小田原市', prefecture: '神奈川県', latitude: 35.2556, longitude: 139.1540, population: 188545 },
+  { id: 'atsugi', name: '厚木市', prefecture: '神奈川県', latitude: 35.4387, longitude: 139.3598, population: 224420 },
+  { id: 'yamato', name: '大和市', prefecture: '神奈川県', latitude: 35.4876, longitude: 139.4585, population: 242065 },
+  { id: 'toyota', name: '豊田市', prefecture: '愛知県', latitude: 35.0826, longitude: 137.1561, population: 422542 },
+  { id: 'okazaki', name: '岡崎市', prefecture: '愛知県', latitude: 34.9544, longitude: 137.1743, population: 386999 },
+  { id: 'ichinomiya', name: '一宮市', prefecture: '愛知県', latitude: 35.3040, longitude: 136.8031, population: 380073 },
+  { id: 'kasugai', name: '春日井市', prefecture: '愛知県', latitude: 35.2481, longitude: 136.9720, population: 306764 },
+  { id: 'toyohashi', name: '豊橋市', prefecture: '愛知県', latitude: 34.7692, longitude: 137.3913, population: 372710 },
+  { id: 'yokkaichi', name: '四日市市', prefecture: '三重県', latitude: 34.9650, longitude: 136.6242, population: 305766 },
+  { id: 'kusatsu', name: '草津市', prefecture: '滋賀県', latitude: 35.0128, longitude: 135.9591, population: 143913 },
+  { id: 'higashiosaka', name: '東大阪市', prefecture: '大阪府', latitude: 34.6796, longitude: 135.6009, population: 489077 },
+  { id: 'nishinomiya', name: '西宮市', prefecture: '兵庫県', latitude: 34.7377, longitude: 135.3419, population: 488931 },
+  { id: 'himeji', name: '姫路市', prefecture: '兵庫県', latitude: 34.8163, longitude: 134.6855, population: 530495 },
+  { id: 'amagasaki', name: '尼崎市', prefecture: '兵庫県', latitude: 34.7170, longitude: 135.4063, population: 450127 },
+  { id: 'akashi', name: '明石市', prefecture: '兵庫県', latitude: 34.6431, longitude: 134.9970, population: 304129 },
+  { id: 'kurashiki', name: '倉敷市', prefecture: '岡山県', latitude: 34.5850, longitude: 133.7720, population: 474861 },
+  { id: 'fukuyama', name: '福山市', prefecture: '広島県', latitude: 34.4887, longitude: 133.3625, population: 461357 },
+  { id: 'shimonoseki', name: '下関市', prefecture: '山口県', latitude: 33.9640, longitude: 130.9408, population: 255051 },
+  { id: 'kurume', name: '久留米市', prefecture: '福岡県', latitude: 33.3194, longitude: 130.5089, population: 303316 },
+  { id: 'sasebo', name: '佐世保市', prefecture: '長崎県', latitude: 33.1592, longitude: 129.7228, population: 237444 },
+  { id: 'asahikawa', name: '旭川市', prefecture: '北海道', latitude: 43.7706, longitude: 142.3650, population: 329306 },
+  { id: 'hakodate', name: '函館市', prefecture: '北海道', latitude: 41.7688, longitude: 140.7290, population: 251084 },
+  { id: 'kushiro', name: '釧路市', prefecture: '北海道', latitude: 42.9850, longitude: 144.3807, population: 165992 },
+  { id: 'obihiro', name: '帯広市', prefecture: '北海道', latitude: 42.9238, longitude: 143.1966, population: 165851 },
+  { id: 'kitami', name: '北見市', prefecture: '北海道', latitude: 43.8038, longitude: 143.8960, population: 115120 },
+  { id: 'iwaki', name: 'いわき市', prefecture: '福島県', latitude: 37.0505, longitude: 140.8879, population: 332931 },
+  { id: 'koriyama', name: '郡山市', prefecture: '福島県', latitude: 37.4004, longitude: 140.3594, population: 322996 },
+  { id: 'nagaoka', name: '長岡市', prefecture: '新潟県', latitude: 37.4470, longitude: 138.8514, population: 266936 },
+  { id: 'takasaki', name: '高崎市', prefecture: '群馬県', latitude: 36.3228, longitude: 139.0031, population: 370884 },
+  { id: 'okinawa', name: '沖縄市', prefecture: '沖縄県', latitude: 26.3344, longitude: 127.8056, population: 142752 },
+  { id: 'urasoe', name: '浦添市', prefecture: '沖縄県', latitude: 26.2459, longitude: 127.7218, population: 115520 },
+  { id: 'ishigaki', name: '石垣市', prefecture: '沖縄県', latitude: 24.3448, longitude: 124.1572, population: 49075 },
+  { id: 'miyakojima', name: '宮古島市', prefecture: '沖縄県', latitude: 24.8032, longitude: 125.2813, population: 54908 }
+]
+
+export function getCityById(id: string): City | undefined {
+  return cities.find(city => city.id === id)
+}
+
+export function getAllCities(): City[] {
+  return [...cities]
+}
+
+export function getRandomCity(): City {
+  const index = Math.floor(Math.random() * cities.length)
+  return cities[index]
+}
+
+export function getCitiesByPrefecture(prefecture: string): City[] {
+  return cities.filter(city => city.prefecture === prefecture)
+}
