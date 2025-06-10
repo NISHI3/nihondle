@@ -26,8 +26,8 @@ export default function CityImage({ city, showDetails }: CityImageProps) {
           {/* メインの形状 */}
           <path
             d={shapePath}
-            fill={showDetails ? '#3B82F6' : '#1F2937'}
-            stroke="#E5E7EB"
+            fill={showDetails ? '#3B82F6' : '#374151'}
+            stroke={showDetails ? '#E5E7EB' : '#6B7280'}
             strokeWidth="2"
             className="transition-all duration-300"
           />
@@ -67,13 +67,6 @@ export default function CityImage({ city, showDetails }: CityImageProps) {
     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg p-4 shadow-inner">
       <div className="relative w-full h-full">
         {renderCityShape()}
-        {!showDetails && (
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="bg-white bg-opacity-60 rounded-full p-8">
-              <span className="text-5xl font-bold text-gray-400">?</span>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   )
