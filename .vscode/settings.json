@@ -1,0 +1,14 @@
+{
+  "git.inputValidation": true,
+  "git.inputValidationLength": 50,
+  "git.inputValidationSubjectLength": 50,
+  "scm.inputFontFamily": "SF Mono, Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace",
+  "git.useCommitInputAsStashMessage": true,
+  "git.verboseCommit": true,
+  "gitlens.ai.experimental.generateCommitMessage.enabled": true,
+  "github.copilot.enable": {
+    "scm": true
+  },
+  "github.copilot.chat.locale": "ja",
+  "scm.defaultViewMode": "tree"
+}
