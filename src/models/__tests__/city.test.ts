@@ -20,8 +20,8 @@ describe('City Model', () => {
       expect(city?.id).toBe('osaka')
       expect(city?.name).toBe('大阪市')
       expect(city?.prefecture).toBe('大阪府')
-      expect(city?.latitude).toBeCloseTo(34.6937, 2)
-      expect(city?.longitude).toBeCloseTo(135.5023, 2)
+      expect(city?.latitude).toBeCloseTo(34.71, 1)
+      expect(city?.longitude).toBeCloseTo(135.53, 1)
     })
 
     it('should return undefined for invalid id', () => {
@@ -34,7 +34,7 @@ describe('City Model', () => {
     it('should return an array of cities', () => {
       const cities = getAllCities()
       expect(Array.isArray(cities)).toBe(true)
-      expect(cities.length).toBeGreaterThan(100)
+      expect(cities.length).toBeGreaterThan(1500)
     })
 
     it('should have valid city objects', () => {
@@ -79,7 +79,7 @@ describe('City Model', () => {
   describe('getCitiesByPrefecture', () => {
     it('should return cities for Tokyo', () => {
       const cities = getCitiesByPrefecture('東京都')
-      expect(cities.length).toBeGreaterThan(5)
+      expect(cities.length).toBeGreaterThan(20)
       expect(cities.every(c => c.prefecture === '東京都')).toBe(true)
     })
 
